@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Kanit&display=swap');
+/*importa a fonte */
+
+header{
+    /*background-color: black;excluir depois de baixar a imagem*/
+    background-image: url(../imagem/filmes.png);/*colocar a imagem de fundo*/
+    display: grid;
+    background-size: cover;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(6, 1fr);
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-row-start: 1;
+    grid-column: 1/13;
+}
+
+li{
+    display: inline-block;
+    margin-right: 8px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo
+{
+    width: 92px;
+    height: 72px;
+}
+
+.logo.div{/*posicionan a logo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    grid-row-start: 3;
+    grid-column: 2/6;
+    color: white;
+    font-family: Kanit;
+    font-size: 36px;
+
+}
+
+h2{
+    font-size: 18px;
+    grid-row-start: 4;
+    grid-column: 2/8;
+    color: white;
+    font-family: Kanit;
+}
+
+.btn{
+    display: flex;
+    grid-row-start: 6;
+    grid-column: 2/12;
+}
+
+.btn_start{
+    background-color: #fd0178;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_plan{
+    background-color: #fd0178;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h6{
+    font-family: Alkatra;/*usa a fonte que foi importada no h6*/
+    font-size: 12px;
+    color: white;
+}
+
+.home{
+    color: #fd0178;
+
+}
+
+hr{
+    margin-top: 4px;
+    border-color: #fd0178;
+    display: flex;
+}
+@media  (max-width:600px){
+    .menu__links{
+        display: none;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 12px;
+    }
+   
+    .btn_start, .btn_plan{
+        width: 100px;
+        height: 50px;
+    }
+    .filmesPrincipais{
+        display: inline-block;
+        width: 600px;
+        height: auto;
+        grid-template-columns: repeat(6,1fr);/*coluna*/
+        grid-template-rows: repeat(12, 1fr); /*linha*/
+        
+    }
+    .filmesPrincipais_titulos{
+        text-align: center;
+        
+        grid-column-start: 1;
+        grid-row: 1/12;
+       
+    }
+   
+}
